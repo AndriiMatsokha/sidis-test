@@ -1,0 +1,29 @@
+:host {
+  display: flex;
+  width: 350px;
+  justify-self: center;
+}
+
+.product {
+  display: grid;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 1%;
+  box-shadow: 3px -2px 0.3em darkgray;
+
+  .product-img {
+    justify-self: center;
+    width: 150px;
+    height: 150px;
+  }
+
+  .product-title {
+    margin: 20px 0 0 0;
+    text-align: center;
+    min-height: 66px;
+  }
+
+  .product-price {
+    margin: 10px 0 20px 0;
+  }
+}

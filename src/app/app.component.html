@@ -1,7 +1,12 @@
-<div class="container">
-  <app-header (onOpen)="burgerIsOpen = $event"></app-header>
-  <div class="content" [class.active]="burgerIsOpen">
-    <h2>Main Content</h2>
-    <p>This is the main content of the page.</p>
-  </div>
+<app-header (onOpen)="burgerIsOpen = $event"></app-header>
+<div
+  *ngIf="(products$ | async) as products"
+  [class.active]="burgerIsOpen"
+  class="products"
+>
+  <app-product
+    *ngFor="let product of products"
+    [product]="product"
+    (onBuy)="this.onBuyLog($event)"
+  ></app-product>
 </div>

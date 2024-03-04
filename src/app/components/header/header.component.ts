@@ -9,6 +9,6 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class HeaderComponent {
   @Output()
-  public onOpen = new EventEmitter<boolean>();
-  public isOpen = false;
+  public onOpen: EventEmitter<boolean> = new EventEmitter<boolean>();
+  public isOpen: boolean = false;
 }

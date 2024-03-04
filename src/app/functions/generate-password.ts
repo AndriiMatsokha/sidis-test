@@ -4,14 +4,14 @@ export function generatePassword(): string {
   const digits: string = '0123456789';
   const symbols: string = '!@#$%^&*()-_=+[]{}|;:,.<>?';
 
-  const randomUppercase = randomCharFrom(uppercaseLetters);
-  const randomLowercase = randomCharFrom(lowercaseLetters);
-  const randomDigit = randomCharFrom(digits);
-  const randomSymbol = randomCharFrom(symbols);
+  const randomUppercase: string = randomCharFrom(uppercaseLetters);
+  const randomLowercase : string= randomCharFrom(lowercaseLetters);
+  const randomDigit : string = randomCharFrom(digits);
+  const randomSymbol : string = randomCharFrom(symbols);
 
   const randomChars: string[] = [randomUppercase, randomLowercase, randomDigit, randomSymbol];
 
-  for (let i = 0; i < 4; i++) {
+  for (let i: number = 0; i < 4; i++) {
     randomChars.push(randomCharFrom(uppercaseLetters + lowercaseLetters + digits + symbols));
   }
 
