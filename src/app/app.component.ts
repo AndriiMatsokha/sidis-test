@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { reverseWord } from './services/reverse-word';
+import { reverseWord } from './functions/reverse-word';
+import { generatePassword } from './functions/generate-password';
 
 @Component({
   selector: 'app-root',
@@ -13,5 +14,7 @@ export class AppComponent implements OnInit {
   public ngOnInit(): void {
     // task-4
     console.log(reverseWord("молоток"));
+    // task-5
+    console.log(generatePassword());
   }
 }
