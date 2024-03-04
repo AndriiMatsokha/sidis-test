@@ -1,0 +1,7 @@
+<div class="container">
+  <app-header (onOpen)="burgerIsOpen = $event"></app-header>
+  <div class="content" [class.active]="burgerIsOpen">
+    <h2>Main Content</h2>
+    <p>This is the main content of the page.</p>
+  </div>
+</div>

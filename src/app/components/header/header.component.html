@@ -1,0 +1,15 @@
+<div class="header">
+  <button class="burger-btn"
+    (click)="
+      isOpen = true;
+      onOpen.emit(isOpen)
+  ">☰</button>
+  <div class="menu" [class.active]="isOpen">
+    <div class="menu-list">
+      <div class="menu-link">Home</div>
+      <div class="menu-link">About</div>
+      <div class="menu-link">Services</div>
+      <div class="menu-link">Contact</div>
+    </div>
+  </div>
+</div>
