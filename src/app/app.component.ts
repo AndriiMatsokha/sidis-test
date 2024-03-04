@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { reverseWord } from './services/reverse-word';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,9 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
-  title = 'sidis-test';
+export class AppComponent implements OnInit {
+  public ngOnInit(): void {
+    // task-4
+    console.log(reverseWord("молоток"));
+  }
 }
